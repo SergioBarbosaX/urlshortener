@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <title>URL Shortener</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/public/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div class="container">
+        <h2>URL Shortener Microservice</h2>
+        <h3>Welcome to the URL Shortener Microservice!</h3>
+        <p>Have you ever had the need to share some url in a short format?, so you can achieve this right now using this tool.
+        </p>
+        
+        <form action="api/shorturl/new" method="POST">
+          <label for="url_input">URL to be shortened</label>
+          <input id="url_input" type="text" name="url" value="https://www.freecodecamp.org">
+          <input type="submit" value="POST URL">
+        </form>
+        
+        <h3>How to use?</h3>
+        <ol>
+          <p><li>Fill the form above with the url that you want to short and click the button.<br>
+                 <code>http(s)://www.example.com(/more/routes)</code> is the format admitted.</li></p>
+          <p><li>You will receive a response like that <br>
+              <code>{"original_url":"www.freecodecamp.org","short_url":1}</code><br>
+              where the value of <code>short_url</code> is your new shorted url</li></p>
+          <p><li>Make a request in the web browser with the new shorted url<br>
+              Example: <a href="https://sergio-url-shortener.glitch.me/api/shorturl/1"><code>[project_url]/api/shorturl/1</code></a><br>
+              You have just been redirected to the original site link.</li></p>
+        </ol>
+      </div>
+      
+     <footer>
+       <p>Designed and coded by Sergio Barbosa</p>
+     </footer>
+   </body>
+
+
+</html>
